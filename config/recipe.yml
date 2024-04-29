@@ -30,10 +30,10 @@ modules:
       - mangohud
       - zsh
       - docker-ce
-	    - docker-ce-cli
-	    - containerd.io
-	    - docker-buildx-plugin
-	    - docker-compose-plugin
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -48,22 +48,22 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        -	com.github.tchx84.Flatseal
-	      -	com.discordapp.Discord
-	      -	io.gitlab.librewolf-community
-	      -	io.freetubeapp.FreeTube
-	      -	com.tutanota.Tutanota
-	      -	com.github.iwalton3.jellyfin-media-player
-	      -	org.libreoffice.LibreOffice
-	      -	org.keepassxc.KeePassXC
-	      -	org.filezillaproject.Filezilla
-	      -	com.github.IsmaelMartinez.teams_for_linux
-	      -	com.github.xournalpp.xournalpp
-	      -	io.github.mimbrero.WhatsAppDesktop
-	      -	io.mpv.Mpv
-	      -	net.davidotek.pupgui2
-	      -	org.pulseaudio.pavucontrol
-	      -	org.qbittorrent.qBittorrent
+        - com.github.tchx84.Flatseal
+	- com.discordapp.Discord
+	- io.gitlab.librewolf-community
+	- io.freetubeapp.FreeTube
+	- com.tutanota.Tutanota
+	- com.github.iwalton3.jellyfin-media-player
+	- org.libreoffice.LibreOffice
+	- org.keepassxc.KeePassXC
+	- org.filezillaproject.Filezilla
+	- com.github.IsmaelMartinez.teams_for_linux
+	- com.github.xournalpp.xournalpp
+	- io.github.mimbrero.WhatsAppDesktop
+	- io.mpv.Mpv
+	- net.davidotek.pupgui2
+	- org.pulseaudio.pavucontrol
+	- org.qbittorrent.qBittorrent
         - io.missioncenter.MissionCenter
       remove:
       # - org.gnome.eog
