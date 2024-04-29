@@ -20,7 +20,6 @@ modules:
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-      - podman-compose
       - kitty
       - kitty-terminfo
       - VirtualBox
