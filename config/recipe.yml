@@ -28,6 +28,7 @@ modules:
       - steam-devices
       - gamescope
       - mangohud
+      - wireshark
       - docker-ce
       - docker-ce-cli
       - containerd.io
