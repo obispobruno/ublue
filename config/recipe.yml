@@ -23,11 +23,11 @@ modules:
       - kitty
       - kitty-terminfo
       - VirtualBox
-      - zsh
       - steam
       - steam-devices
       - gamescope
       - mangohud
+      - corectrl
       - wireshark
       - docker-ce
       - docker-ce-cli
