@@ -16,6 +16,10 @@ modules:
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
 
+  - type: script
+    script: ./config/scripts/setup.sh
+  - type: script
+    script: ./config/scripts/brew.sh
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
