@@ -12,14 +12,10 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - usr: /usr # copies config/files/usr into your image's /usr.
-                  # put configuration files you want in /etc/ on a booted system 
-                  # in /usr/etc/ in the image. read more in files module reference.
-
-  - type: script
-    script: ./config/scripts/setup.sh
-  - type: script
-    script: ./config/scripts/brew.sh
+      - usr:
+          /usr # copies config/files/usr into your image's /usr.
+          # put configuration files you want in /etc/ on a booted system
+          # in /usr/etc/ in the image. read more in files module reference.
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
@@ -27,11 +23,11 @@ modules:
       - kitty
       - kitty-terminfo
       - VirtualBox
+      - zsh
       - steam
       - steam-devices
       - gamescope
       - mangohud
-      - zsh
       - docker-ce
       - docker-ce-cli
       - containerd.io
@@ -53,6 +49,7 @@ modules:
       install:
         - com.github.tchx84.Flatseal
         - com.discordapp.Discord
+        - io.github.spacingbat3.webcord
         - io.gitlab.librewolf-community
         - io.freetubeapp.FreeTube
         - com.tutanota.Tutanota
@@ -72,4 +69,3 @@ modules:
       # - org.gnome.eog
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
