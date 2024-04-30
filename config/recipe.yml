@@ -28,6 +28,7 @@ modules:
       - gamescope
       - mangohud
       - corectrl
+      - xwaylandvideobridge
       - wireshark
       - docker-ce
       - docker-ce-cli
