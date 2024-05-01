@@ -29,6 +29,8 @@ modules:
       - gamescope
       - mangohud
       - corectrl
+      - zathura
+      - zathura-pdf-poppler
       - xwaylandvideobridge
       - wireshark
       - docker-ce
