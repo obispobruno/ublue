@@ -31,6 +31,7 @@ modules:
       - corectrl
       - zathura
       - zathura-pdf-poppler
+      - mpv
       - xwaylandvideobridge
       - wireshark
       - docker-ce
@@ -65,11 +66,10 @@ modules:
         - com.github.IsmaelMartinez.teams_for_linux
         - com.github.xournalpp.xournalpp
         - io.github.mimbrero.WhatsAppDesktop
-        - io.mpv.Mpv
         - net.davidotek.pupgui2
-        - org.pulseaudio.pavucontrol
         - org.qbittorrent.qBittorrent
         - io.missioncenter.MissionCenter
+        - com.obsproject.Studio
       remove:
       # - org.gnome.eog
 
