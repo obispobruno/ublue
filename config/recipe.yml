@@ -12,10 +12,8 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - usr:
-          /usr/etc # copies config/files/usr into your image's /usr.
-          # put configuration files you want in /etc/ on a booted system
-          # in /usr/etc/ in the image. read more in files module reference.
+      - usr: /usr/etc
+      - just: /usr/share/ublue-os/just
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
