@@ -17,4 +17,14 @@ setup-personal-config:
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.config/zsh/plugins/zsh-autocomplete
 
 configure-corectrl:
+    #!/usr/bin/env bash
+    
+    mkdir -p ~/.config/autostart
+    
+    if [[ -f /usr/share/applications/org.corectrl.corectrl.desktop ]]; then
+    cp /usr/share/applications/org.corectrl.corectrl.desktop ~/.config/autostart/org.corectrl.CoreCtrl.desktop
+    elif [[ -f /usr/share/applications/org.corectrl.CoreCtrl.desktop ]]; then
+    cp /usr/share/applications/org.corectrl.CoreCtrl.desktop ~/.config/autostart/org.corectrl.CoreCtrl.desktop
+    fi
+    
     rpm-ostree kargs --append-if-missing=amdgpu.ppfeaturemask=0xffffffff
