@@ -10,15 +10,22 @@
 
 setup-personal-config:
     #!/usr/bin/env bash
+
     git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
-
-    mkdir -p ~/.local/share/fonts
-    wget -P ~/.local/share/fonts $(curl -sL https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep -o 'https://github.com/ryanoasis/nerd-fonts/releases/download/[^"]*' | grep JetBrainsMono.tar.xz)
-    tar -xvf ~/.local/share/fonts/JetBrainsMono.tar.xz -C ~/.local/share/fonts
-
+    
+    git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+    
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting/
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.config/zsh/plugins/zsh-autocomplete
+
+install-jetbrains-font:
+    #!/usr/bin/env bash
+    mkdir -p ~/.local/share/fonts
+    wget -P ~/.local/share/fonts $(curl -sL https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | grep -o 'https://github.com/ryanoasis/nerd-fonts/releases/download/[^"]*' | grep JetBrainsMono.tar.xz)
+    tar -xf ~/.local/share/fonts/JetBrainsMono.tar.xz -C ~/.local/share/fonts
 
 configure-corectrl:
     #!/usr/bin/env bash
