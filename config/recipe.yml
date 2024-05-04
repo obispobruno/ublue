@@ -12,9 +12,9 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - polkit-1: /usr/etc
+      - etc: /usr/etc
       - 60-custom.just: /usr/share/ublue-os/just
-      - xkb: /usr/share/X11
+      - xkb: /usr/share/X11/xkb
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
