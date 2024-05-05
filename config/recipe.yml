@@ -19,6 +19,8 @@ modules:
       - brlpdwrappermfcj410: /usr/lib/cups/filter
       - brother_mfcj410_printer_en.ppd: /usr/share/cups/model/Brother
       - brother_mfcj410_printer_en.ppd: /usr/share/ppd/Brother
+      - MFCJ410.ppd: /usr/etc/cups/ppd
+      - brprintconf_mfcj410: /usr/bin
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
