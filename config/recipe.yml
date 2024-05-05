@@ -67,6 +67,9 @@ modules:
         - io.missioncenter.MissionCenter
         - com.obsproject.Studio
         - org.gnome.Boxes
+        - org.winehq.Wine
+        - net.lutris.Lutris
+        - org.ryujinx.Ryujinx
       remove:
       # - org.gnome.eog
 
