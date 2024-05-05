@@ -24,6 +24,8 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
       - https://negativo17.org/repos/fedora-uld.repo
     install:
+      - gutenprint
+      - gutenprint-cups
       - uld
       - kitty
       - kitty-terminfo
