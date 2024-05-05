@@ -33,6 +33,7 @@ modules:
       - corectrl
       - zathura
       - zathura-pdf-poppler
+      - foomatic
       - mpv
       - wireshark
       - docker-ce
