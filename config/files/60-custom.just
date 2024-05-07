@@ -85,3 +85,8 @@ install-brew-packages:
     brew install dotnet
     brew install python
     brew install pipx
+
+install-auto-cpufreq:
+    #!/usr/bin/env bash
+    git clone https://github.com/AdnanHodzic/auto-cpufreq.git /tmp/auto-cpufreq
+    sudo /tmp/auto-cpufreq/auto-cpufreq-installer
