@@ -32,7 +32,7 @@ modules:
       - mpv
       - tlp
       - gcc
-      - g++
+      - gcc-c++
       - wireshark
       - docker-ce
       - docker-ce-cli
