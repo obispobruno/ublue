@@ -33,7 +33,6 @@ modules:
       - zathura
       - zathura-pdf-poppler
       - mpv
-      - tlp
       - wireshark
       - docker-ce
       - docker-ce-cli
