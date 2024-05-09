@@ -40,6 +40,11 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
       - containerd.io
+    remove:
+      # example: removing firefox (in favor of the flatpak)
+      # "firefox" is the main package, "firefox-langpacks" is a dependency
+      # - firefox
+      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: fonts
     fonts:
@@ -74,5 +79,7 @@ modules:
         - net.lutris.Lutris
         - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2
+      remove:
+      # - org.gnome.eog
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
