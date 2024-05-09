@@ -34,6 +34,8 @@ modules:
       - zathura-pdf-poppler
       - mpv
       - tlp
+      - gcc
+      - g++
       - wireshark
       - docker-ce
       - docker-ce-cli
