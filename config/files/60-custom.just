@@ -100,17 +100,3 @@ install-opentabletdriver:
     systemctl --user daemon-reload && \
     systemctl enable --user --now arch-opentabletdriver.service && \
     distrobox enter -n arch -- bash -c 'distrobox-export --app otd-gui'
-
-install-lact:
-    #!/usr/bin/env bash
-    IMAGE_INFO="/usr/share/ublue-os/image-info.json"
-    ublue-update --wait
-    echo 'Installing LACT...'
-    wget \
-      $(curl -s https://api.github.com/repos/ilya-zlobintsev/LACT/releases/latest | \
-      jq -r ".assets[] | select(.name | test(\"lact-[0-9].*fedora-$(rpm -E %fedora)\")) | .browser_download_url") \
-      -O /tmp/lact.rpm
-    rpm-ostree install --apply-live -y /tmp/lact.rpm
-    sudo systemctl enable --now lactd
-    rm /tmp/lact.rpm
-    echo 'Complete.'
