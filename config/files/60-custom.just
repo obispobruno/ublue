@@ -10,7 +10,6 @@
 
 setup-personal-config:
     #!/usr/bin/env bash
-
     git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
     
     git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
@@ -40,11 +39,13 @@ configure-corectrl:
     
     rpm-ostree kargs --append-if-missing=amdgpu.ppfeaturemask=0xffffffff
 
-configure-docker-group:
+configure-group-permissions:
     #!/usr/bin/env bash
     sudo groupadd docker
-    sudo usermod -aG docker $USER
     newgrp docker
+    sudo usermod -aG docker $USER
+    sudo usermod -aG libvirt $USER
+    sudo usermod -aG wireshark $USER
 
 install-brew-packages:
     #!/usr/bin/env bash
@@ -85,3 +86,17 @@ install-brew-packages:
     brew install dotnet
     brew install python
     brew install pipx
+
+install-opentabletdriver:
+    #!/usr/bin/bash
+    source /usr/lib/ujust/ujust.sh
+    if grep -qvz "arch" <<< $(distrobox list); then \
+      Assemble noconfirmcreate "" "arch"; \
+    fi && \
+    distrobox enter -n arch -- bash -c 'paru -S opentabletdriver --noconfirm' && \
+    mkdir -p ~/.config/systemd/user/ && \
+    rm -f ~/.config/systemd/user/arch-opentabletdriver.service && \
+    wget https://raw.githubusercontent.com/ublue-os/bazzite/main/post_install_files/OpenTabletDriver/opentabletdriver.service -O ~/.config/systemd/user/arch-opentabletdriver.service && \
+    systemctl --user daemon-reload && \
+    systemctl enable --user --now arch-opentabletdriver.service && \
+    distrobox enter -n arch -- bash -c 'distrobox-export --app otd-gui'
