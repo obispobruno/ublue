@@ -22,7 +22,7 @@ modules:
       - kitty
       - kitty-terminfo
       - zsh
-      # - steam
+      - steam
       - steam-devices
       - gamescope
       - mangohud
