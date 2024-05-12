@@ -79,7 +79,6 @@ modules:
         - net.lutris.Lutris
         - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2
-        - com.valvesoftware.Steam
       remove:
       # - org.gnome.eog
 
