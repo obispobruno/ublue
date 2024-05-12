@@ -22,7 +22,7 @@ modules:
       - kitty
       - kitty-terminfo
       - zsh
-      - steam
+      # - steam
       - steam-devices
       - gamescope
       - mangohud
@@ -32,6 +32,7 @@ modules:
       - mpv
       - tlp
       - virt-manager
+      - syncthing
       - gcc
       - gcc-c++
       - wireshark
@@ -46,10 +47,10 @@ modules:
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-  # - type: fonts
-  #   fonts:
-  #     nerd-fonts:
-  #       - JetBrainsMono
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -74,7 +75,6 @@ modules:
         - org.qbittorrent.qBittorrent
         - io.missioncenter.MissionCenter
         - com.obsproject.Studio
-        - org.gnome.Boxes
         - org.winehq.Wine
         - net.lutris.Lutris
         - org.ryujinx.Ryujinx
