@@ -1,4 +1,4 @@
-# vim: set ft=make :
+# vim: set ft=just :
 # This file can be modified downstream to add custom just commands
 # ## Standardized verbs
 # configure- = configure something that is pre-installed on the image
@@ -10,16 +10,23 @@
 
 setup-personal-config:
     #!/usr/bin/env bash
+    rm -rf ~/.config
+    rm -rf ~/.local/bin
+    rm -rf ~/.local/share/nvim
+    rm -rf ~/.bashrc
+    rm -rf ~/.zshrc
+    rm -rf ~/.dotfiles
+    rm -rf ~/README.md
+    rm -rf ~/README.org
+    
     git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
     
     git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+    echo 'Checking out to desktop branch'
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout desktop
     
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting/
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.config/zsh/plugins/zsh-autocomplete
-
 install-jetbrains-font:
     #!/usr/bin/env bash
     mkdir -p ~/.local/share/fonts
@@ -41,8 +48,6 @@ configure-corectrl:
 
 configure-group-permissions:
     #!/usr/bin/env bash
-    sudo groupadd docker
-    newgrp docker
     sudo usermod -aG docker $USER
     sudo usermod -aG libvirt $USER
     sudo usermod -aG wireshark $USER
@@ -50,7 +55,6 @@ configure-group-permissions:
 install-brew-packages:
     #!/usr/bin/env bash
     
-    brew install git
     brew install vim
     brew install ncdu
     brew install rust
@@ -71,7 +75,6 @@ install-brew-packages:
     brew install p7zip
     brew install procs
     brew install btop
-    brew install syncthing
     brew install zoxide
     brew install gh
     brew install lf
@@ -83,9 +86,12 @@ install-brew-packages:
     brew install haskell-language-server
     brew install yazi
     brew install starship
-    brew install dotnet
+    brew install dotnet@6
     brew install python
     brew install pipx
+    brew install zsh-autocomplete
+    brew install zsh-autosuggestions
+    brew install zsh-syntax-highlighting
 
 install-opentabletdriver:
     #!/usr/bin/env bash
