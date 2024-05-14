@@ -112,7 +112,7 @@ install-distrobox-steam:
     #!/usr/bin/env bash
     distrobox-create --unshare-netns --image ghcr.io/ublue-os/bazzite-arch --name bazzite-arch -Y
     distrobox-enter -n bazzite-arch -- bash -c 'distrobox-export --app steam'
-    distrobox-enter -n bazzite-arch -- bash -c 'sudo pacman -S --noconfirm mangohud'
+    distrobox-enter -n bazzite-arch -- bash -c 'sudo pacman -S --noconfirm mangohud gamescope'
     xhost +si:localuser:$USER
     sudo chown -f -R $USER:$USER /tmp/.X11-unix
 
