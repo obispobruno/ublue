@@ -29,10 +29,8 @@ modules:
       - corectrl
       - zathura
       - zathura-pdf-poppler
-      - mpv
       - tlp
       - virt-manager
-      - syncthing
       - gcc
       - gcc-c++
       - wireshark
@@ -41,6 +39,7 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
       - containerd.io
+      - podman-compose
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency

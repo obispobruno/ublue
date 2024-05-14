@@ -55,6 +55,14 @@ configure-group-permissions:
 install-brew-packages:
     #!/usr/bin/env bash
     
+    brew install syncthing
+    brew install zsh-autocomplete
+    brew install zsh-autosuggestions
+    brew install zsh-syntax-highlighting
+    brew install eza
+    brew install bat
+    brew install yazi
+    brew install starship
     brew install vim
     brew install ncdu
     brew install rust
@@ -69,8 +77,6 @@ install-brew-packages:
     brew install ripgrep
     brew install fd
     brew install fzf
-    brew install bat
-    brew install eza
     brew install fastfetch
     brew install p7zip
     brew install procs
@@ -84,14 +90,9 @@ install-brew-packages:
     brew install tldr
     brew install ghc
     brew install haskell-language-server
-    brew install yazi
-    brew install starship
     brew install dotnet@6
     brew install python
     brew install pipx
-    brew install zsh-autocomplete
-    brew install zsh-autosuggestions
-    brew install zsh-syntax-highlighting
 
 install-opentabletdriver:
     #!/usr/bin/env bash
