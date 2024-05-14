@@ -28,9 +28,9 @@ modules:
       - zathura-pdf-poppler
       - tlp
       - virt-manager
+      - firewall-config
       - gcc
       - gcc-c++
-      - wireshark
       - docker-ce
       - docker-ce-cli
       - docker-buildx-plugin

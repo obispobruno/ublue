@@ -112,7 +112,9 @@ install-distrobox-steam:
     #!/usr/bin/env bash
     distrobox-create --unshare-netns --image ghcr.io/ublue-os/bazzite-arch --name bazzite-arch -Y
     distrobox-enter -n bazzite-arch -- bash -c 'distrobox-export --app steam'
-    distrobox-enter -n bazzite-arch -- bash -c 'mkdir -p ~/.steam && distrobox-export --bin /usr/bin/steamcmd --export-path ~/.steam && mv ~/.steam/steamcmd ~/.steam/steamcmd.sh'
     distrobox-enter -n bazzite-arch -- bash -c 'sudo pacman -S --noconfirm mangohud'
     xhost +si:localuser:$USER
     sudo chown -f -R $USER:$USER /tmp/.X11-unix
+
+setup-root-fedora-distrobox:
+    distrobox-create fedora -i fedora:latest --root
