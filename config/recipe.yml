@@ -60,6 +60,7 @@ modules:
         - dev.vencord.Vesktop
         - io.freetubeapp.FreeTube
         - com.tutanota.Tutanota
+        - io.mpv.Mpv
         - com.github.iwalton3.jellyfin-media-player
         - org.libreoffice.LibreOffice
         - org.keepassxc.KeePassXC
@@ -71,7 +72,6 @@ modules:
         - org.qbittorrent.qBittorrent
         - io.missioncenter.MissionCenter
         - com.obsproject.Studio
-        - org.winehq.Wine
         - net.lutris.Lutris
         - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2

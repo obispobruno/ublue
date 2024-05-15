@@ -55,44 +55,46 @@ configure-group-permissions:
 install-brew-packages:
     #!/usr/bin/env bash
     
-    brew install syncthing
-    brew install zsh-autocomplete
-    brew install zsh-autosuggestions
-    brew install zsh-syntax-highlighting
-    brew install eza
-    brew install bat
-    brew install yazi
-    brew install starship
-    brew install vim
-    brew install ncdu
-    brew install rust
-    brew install tmux
-    brew install htop
-    brew install wget
-    brew install curl
-    brew install gcc
-    brew install neovim
-    brew install npm
-    brew install binutils
-    brew install ripgrep
-    brew install fd
-    brew install fzf
-    brew install fastfetch
-    brew install p7zip
-    brew install procs
-    brew install btop
-    brew install zoxide
-    brew install gh
-    brew install lf
-    brew install unzip
-    brew install unar
-    brew install trash-cli
-    brew install tldr
-    brew install ghc
-    brew install haskell-language-server
-    brew install dotnet@6
-    brew install python
-    brew install pipx
+    brew install \
+      syncthing \
+      zsh-autocomplete \
+      zsh-autosuggestions \
+      zsh-syntax-highlighting \
+      eza \
+      bat \
+      yazi \
+      starship \
+      vim \
+      ncdu \
+      rust \
+      tmux \
+      htop \
+      wget \
+      curl \
+      gcc \
+      neovim \
+      npm \
+      binutils \
+      ripgrep \
+      fd \
+      fzf \
+      fastfetch \
+      p7zip \
+      procs \
+      btop \
+      zoxide \
+      gh \
+      lf \
+      unzip \
+      unar \
+      trash-cli \
+      tldr \
+      ghc \
+      haskell-language-server \
+      dotnet@6 \
+      python \
+      pipx \
+      mpv
 
 install-opentabletdriver:
     #!/usr/bin/env bash
