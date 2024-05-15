@@ -19,6 +19,7 @@ modules:
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
+      - zsh
       - steam-devices
       - corectrl
       - zathura
@@ -37,8 +38,8 @@ modules:
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - firefox
+      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: fonts
     fonts:
@@ -53,6 +54,7 @@ modules:
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - io.gitlab.librewolf-community
+        - org.mozilla.firefox
         - com.github.tchx84.Flatseal
         - dev.vencord.Vesktop
         - io.freetubeapp.FreeTube
