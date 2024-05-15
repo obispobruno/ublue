@@ -92,9 +92,8 @@ install-brew-packages:
       ghc \
       haskell-language-server \
       dotnet@6 \
-      python \
-      pipx \
-      mpv
+      mpv \
+      yewtube
 
 install-opentabletdriver:
     #!/usr/bin/env bash
