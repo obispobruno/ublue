@@ -19,9 +19,6 @@ modules:
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-      - kitty
-      - kitty-terminfo
-      - zsh
       - steam-devices
       - corectrl
       - zathura
