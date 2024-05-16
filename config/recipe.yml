@@ -19,12 +19,14 @@ modules:
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
+      - kitty
       - zsh
       - steam-devices
       - corectrl
       - zathura
       - zathura-pdf-poppler
       - tlp
+      - powertop
       - virt-manager
       - firewall-config
       - gcc
@@ -40,6 +42,7 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - foot
 
   - type: fonts
     fonts:

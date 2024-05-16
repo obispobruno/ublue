@@ -114,8 +114,19 @@ install-distrobox-steam:
     distrobox-create --unshare-netns --image ghcr.io/ublue-os/bazzite-arch --name bazzite-arch -Y
     distrobox-enter -n bazzite-arch -- bash -c 'distrobox-export --app steam'
     distrobox-enter -n bazzite-arch -- bash -c 'sudo pacman -S --noconfirm mangohud gamescope'
+
+setup-gamescope-steam:
+    #!/usr/bin/env bash
     xhost +si:localuser:$USER
     sudo chown -f -R $USER:$USER /tmp/.X11-unix
 
 setup-root-fedora-distrobox:
+    #!/usr/bin/env bash
     distrobox-create fedora -i fedora:latest --root
+
+update-all:
+    #!/usr/bin/env bash
+    brew update && brew upgrade
+    flatpak update -y
+    distrobox-upgrade --all
+    rpm-ostree upgrade
