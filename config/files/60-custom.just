@@ -93,6 +93,7 @@ install-brew-packages:
       haskell-language-server \
       dotnet@6 \
       mpv \
+      inetutils \
       yewtube
 
 install-opentabletdriver:

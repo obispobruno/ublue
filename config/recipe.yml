@@ -16,7 +16,6 @@ modules:
     install:
       - kitty
       - zsh
-      - steam-devices
       - corectrl
       - zathura
       - zathura-pdf-poppler
