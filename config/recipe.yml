@@ -22,6 +22,7 @@ modules:
       - tlp
       - powertop
       - virt-manager
+      - wireguard-tools
       - firewall-config
       - gcc
       - gcc-c++

@@ -88,7 +88,7 @@ install-brew-packages:
       unzip \
       unar \
       trash-cli \
-      tldr \
+      tealdeer \
       ghc \
       haskell-language-server \
       dotnet@6 \
