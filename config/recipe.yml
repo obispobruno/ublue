@@ -19,11 +19,12 @@ modules:
       - corectrl
       - zathura
       - zathura-pdf-poppler
+      - openrgb
       - tlp
       - powertop
       - virt-manager
       - wireguard-tools
-      - firewall-config
+      - ufw
       - gcc
       - gcc-c++
       - docker-ce
@@ -35,7 +36,6 @@ modules:
       - firefox
       - firefox-langpacks
       - foot
-
   - type: fonts
     fonts:
       nerd-fonts:
@@ -70,5 +70,5 @@ modules:
         - net.pcsx2.PCSX2
       remove:
       # - org.gnome.eog
-
+  - type: brew
   - type: signing
