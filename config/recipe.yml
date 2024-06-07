@@ -23,7 +23,6 @@ modules:
       - tlp
       - powertop
       - virt-manager
-      - wireguard-tools
       - ufw
       - gcc
       - gcc-c++
