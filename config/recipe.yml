@@ -50,6 +50,7 @@ modules:
         - org.mozilla.firefox
         - com.github.tchx84.Flatseal
         - dev.vencord.Vesktop
+        - org.localsend.localsend_app
         - io.freetubeapp.FreeTube
         - com.tutanota.Tutanota
         - io.mpv.Mpv
