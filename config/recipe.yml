@@ -22,7 +22,6 @@ modules:
       - openrgb
       - tlp
       - powertop
-      - waydroid
       - virt-manager
       - ufw
       - gcc
