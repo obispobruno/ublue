@@ -7,9 +7,10 @@ image-version: latest
 modules:
   - type: files
     files:
-      - etc: /usr/etc
-      - 60-custom.just: /usr/share/ublue-os/just
-      - xkb: /usr/share/X11/xkb
+      - source: etc
+      - destination: /usr/etc
+      - source: xkb
+      - destination: /usr/share/X11/xkb
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
@@ -68,7 +69,15 @@ modules:
         - net.lutris.Lutris
         - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2
-      remove:
-      # - org.gnome.eog
+        - org.prismlauncher.PrismLauncher
+        - net.cozic.joplin_desktop
+        - com.valvesoftware.Steam
+        - org.kde.kasts
+        - io.gitlab.news_flash.NewsFlash
+        - com.nextcloud.desktopclient.nextcloud
+        - org.gnome.World.Iotas
+        - com.bitwarden.desktop
   - type: brew
+    nofile-limits: true
+  - type: justfiles
   - type: signing
