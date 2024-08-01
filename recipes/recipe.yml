@@ -82,5 +82,7 @@ modules:
         - com.bitwarden.desktop
   - type: brew
     nofile-limits: true
+  - type: chezmoi
+    repository: "https://github.com/obispobruno/dotfiles"
   - type: justfiles
   - type: signing
