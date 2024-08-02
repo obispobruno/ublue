@@ -88,6 +88,6 @@ modules:
   - type: justfiles
   - type: signing
   - type: systemd
-    system:
+    user:
       enabled:
         - syncthing.service
