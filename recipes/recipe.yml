@@ -11,6 +11,8 @@ modules:
       - destination: /usr/etc
       - source: xkb
       - destination: /usr/share/X11/xkb
+      - source: wallpapers
+      - destination: /usr/share/backgrounds/ublue
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
