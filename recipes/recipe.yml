@@ -23,7 +23,6 @@ modules:
       - corectrl
       - zathura
       - zathura-pdf-poppler
-      - openrgb
       - SwayNotificationCenter
       - tlp
       - powertop
@@ -75,13 +74,12 @@ modules:
         - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2
         - org.prismlauncher.PrismLauncher
-        - net.cozic.joplin_desktop
         - com.valvesoftware.Steam
         - org.kde.kasts
         - io.gitlab.news_flash.NewsFlash
         - com.nextcloud.desktopclient.nextcloud
         - org.gnome.World.Iotas
-        - com.bitwarden.desktop
+        - org.openrgb.OpenRGB
   - type: brew
     nofile-limits: true
   - type: chezmoi
