@@ -36,6 +36,7 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
       - containerd.io
+      - wireshark
     remove:
       - firefox
       - firefox-langpacks
