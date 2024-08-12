@@ -8,7 +8,7 @@ modules:
   - type: files
     files:
       - source: etc
-      - destination: /usr/etc
+      - destination: /etc
       - source: xkb
       - destination: /usr/share/X11/xkb
       - source: wallpapers
