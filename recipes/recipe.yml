@@ -80,6 +80,7 @@ modules:
         - io.gitlab.news_flash.NewsFlash
         - com.nextcloud.desktopclient.nextcloud
         - org.gnome.World.Iotas
+        - io.github.thetumultuousunicornofdarkness.cpu-x
         - org.openrgb.OpenRGB
   - type: brew
     nofile-limits: true
