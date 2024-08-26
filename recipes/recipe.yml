@@ -57,28 +57,30 @@ modules:
         - com.github.tchx84.Flatseal
         - dev.vencord.Vesktop
         - org.localsend.localsend_app
+        - org.keepassxc.KeePassXC
+        - com.nextcloud.desktopclient.nextcloud
+        - io.missioncenter.MissionCenter
         - io.freetubeapp.FreeTube
         - com.tutanota.Tutanota
         - io.mpv.Mpv
         - com.github.iwalton3.jellyfin-media-player
         - org.libreoffice.LibreOffice
-        - org.keepassxc.KeePassXC
+        - io.github.mimbrero.WhatsAppDesktop
         - org.filezillaproject.Filezilla
         - com.github.IsmaelMartinez.teams_for_linux
         - com.github.xournalpp.xournalpp
-        - io.github.mimbrero.WhatsAppDesktop
+        - com.valvesoftware.Steam
+        - com.calibre_ebook.calibre
+        - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
         - net.davidotek.pupgui2
         - org.qbittorrent.qBittorrent
-        - io.missioncenter.MissionCenter
         - com.obsproject.Studio
         - net.lutris.Lutris
         - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2
         - org.prismlauncher.PrismLauncher
-        - com.valvesoftware.Steam
         - org.kde.kasts
         - io.gitlab.news_flash.NewsFlash
-        - com.nextcloud.desktopclient.nextcloud
         - org.gnome.World.Iotas
         - org.openrgb.OpenRGB
   - type: brew

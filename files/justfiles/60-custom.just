@@ -8,25 +8,6 @@
 # fix-       = apply fix/patch/workaround for something
 # foo        = no verb is used for shortcuts or something deemed important enough to use a super memorable name
 
-setup-personal-config:
-    #!/usr/bin/env bash
-    rm -rf ~/.config
-    rm -rf ~/.local/bin
-    rm -rf ~/.local/share/nvim
-    rm -rf ~/.bashrc
-    rm -rf ~/.zshrc
-    rm -rf ~/.dotfiles
-    rm -rf ~/README.md
-    rm -rf ~/README.org
-    
-    git clone https://github.com/obispobruno/nvim-config.git ~/.config/nvim
-    
-    git clone --bare https://github.com/obispobruno/.dotfiles.git ~/.dotfiles
-    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
-    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
-    echo 'Checking out to desktop branch'
-    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout desktop
-    
 install-jetbrains-font:
     #!/usr/bin/env bash
     mkdir -p ~/.local/share/fonts
@@ -51,50 +32,6 @@ configure-group-permissions:
     sudo usermod -aG docker $USER
     sudo usermod -aG libvirt $USER
     sudo usermod -aG wireshark $USER
-
-install-brew-packages:
-    #!/usr/bin/env bash
-    
-    brew install \
-      syncthing \
-      zsh-autocomplete \
-      zsh-autosuggestions \
-      zsh-syntax-highlighting \
-      eza \
-      bat \
-      yazi \
-      starship \
-      vim \
-      ncdu \
-      rust \
-      tmux \
-      htop \
-      wget \
-      curl \
-      gcc \
-      neovim \
-      npm \
-      binutils \
-      ripgrep \
-      fd \
-      fzf \
-      fastfetch \
-      p7zip \
-      procs \
-      btop \
-      zoxide \
-      gh \
-      lf \
-      unzip \
-      unar \
-      trash-cli \
-      tealdeer \
-      ghc \
-      haskell-language-server \
-      dotnet@6 \
-      mpv \
-      inetutils \
-      yewtube
 
 install-opentabletdriver:
     #!/usr/bin/env bash
