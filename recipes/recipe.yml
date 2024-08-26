@@ -82,6 +82,7 @@ modules:
         - org.kde.kasts
         - io.gitlab.news_flash.NewsFlash
         - org.gnome.World.Iotas
+        - io.github.thetumultuousunicornofdarkness.cpu-x
         - org.openrgb.OpenRGB
   - type: brew
     nofile-limits: true
