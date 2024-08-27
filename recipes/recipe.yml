@@ -28,7 +28,6 @@ modules:
       - powertop
       - virt-manager
       - wireguard-tools
-      - ufw
       - gcc
       - gcc-c++
       - docker-ce
@@ -41,6 +40,10 @@ modules:
       - firefox
       - firefox-langpacks
       - foot
+  - type: systemd
+    system:
+      enabled:
+        - docker.service
   - type: fonts
     fonts:
       nerd-fonts:
