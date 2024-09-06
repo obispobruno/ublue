@@ -19,6 +19,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
     install:
       - kitty
+      - kitty-terminfo
       - zsh
       - corectrl
       - zathura
