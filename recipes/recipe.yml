@@ -38,8 +38,6 @@ modules:
       - containerd.io
       - wireshark
     remove:
-      - firefox
-      - firefox-langpacks
       - foot
   - type: systemd
     system:
