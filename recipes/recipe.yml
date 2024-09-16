@@ -69,7 +69,7 @@ modules:
         - io.mpv.Mpv
         - com.github.iwalton3.jellyfin-media-player
         - org.libreoffice.LibreOffice
-        - io.github.mimbrero.WhatsAppDesktop
+        - com.rtosta.zapzap
         - org.filezillaproject.Filezilla
         - com.github.IsmaelMartinez.teams_for_linux
         - com.github.xournalpp.xournalpp
