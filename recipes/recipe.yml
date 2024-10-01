@@ -20,6 +20,7 @@ modules:
     install:
       - kitty
       - kitty-terminfo
+      - alacritty
       - zsh
       - corectrl
       - zathura
