@@ -69,6 +69,8 @@ modules:
         - com.tutanota.Tutanota
         - io.mpv.Mpv
         - com.github.iwalton3.jellyfin-media-player
+        - com.unicornsonlsd.finamp
+        - com.bitwarden.desktop
         - org.libreoffice.LibreOffice
         - com.rtosta.zapzap
         - org.filezillaproject.Filezilla
