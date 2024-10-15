@@ -1,5 +1,5 @@
 name: ublue-sway-custom
-description: This is my personal OS image.
+description: Custom image based on ublue-os/sericea-main
 
 base-image: ghcr.io/ublue-os/sericea-main
 image-version: latest
