@@ -25,9 +25,6 @@ modules:
       - gcc
       - gcc-c++
       - wireshark
-    remove:
-      - firefox
-      - firefox-langpacks
   - type: systemd
     system:
       enabled:
