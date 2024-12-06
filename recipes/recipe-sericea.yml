@@ -86,6 +86,7 @@ modules:
         - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2
         - org.prismlauncher.PrismLauncher
+        - io.dbeaver.DBeaverCommunity
         - org.kde.kasts
         - io.gitlab.news_flash.NewsFlash
         - org.gnome.World.Iotas
