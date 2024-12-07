@@ -38,6 +38,7 @@ modules:
       - docker-compose-plugin
       - containerd.io
       - wireshark
+      - android-tools
     remove:
       - firefox
       - firefox-langpacks
