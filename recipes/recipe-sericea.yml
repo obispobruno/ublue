@@ -39,6 +39,9 @@ modules:
       - containerd.io
       - wireshark
       - android-tools
+      - steam
+      - gamescope
+      - mangohud
     remove:
       - firefox
       - firefox-langpacks
