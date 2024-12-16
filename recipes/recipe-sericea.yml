@@ -2,7 +2,7 @@ name: ublue-sway-custom
 description: Custom image based on ublue-os/sericea-main
 
 base-image: ghcr.io/ublue-os/sericea-main
-image-version: 41
+image-version: 40
 
 modules:
   - type: files
@@ -39,7 +39,6 @@ modules:
       - containerd.io
       - wireshark
       - android-tools
-      - steam
       - gamescope
       - mangohud
     remove:
