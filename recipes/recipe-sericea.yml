@@ -60,8 +60,8 @@ modules:
       repo-name: flathub
       repo-title: "Flathub (system-wide)"
       install:
-        - io.gitlab.librewolf-community
         - org.mozilla.firefox
+        - com.brave.Browser
         - com.github.tchx84.Flatseal
         - dev.vencord.Vesktop
         - org.localsend.localsend_app
