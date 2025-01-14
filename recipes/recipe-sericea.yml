@@ -16,7 +16,7 @@ modules:
   - type: rpm-ostree
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
-      - http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+      - https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
     install:
@@ -32,7 +32,7 @@ modules:
       - tlp
       - powertop
       - virt-manager
-      - VirtualBox
+      - VirtualBox-7.0
       - vagrant
       - wireguard-tools
       - gcc
