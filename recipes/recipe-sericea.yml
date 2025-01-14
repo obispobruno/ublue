@@ -31,6 +31,8 @@ modules:
       - tlp
       - powertop
       - virt-manager
+      - VirtualBox
+      - vagrant
       - wireguard-tools
       - gcc
       - gcc-c++
