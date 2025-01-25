@@ -33,8 +33,6 @@ modules:
       - powertop
       - virt-manager
       - VirtualBox-7.0
-      - vagrant
-      - wireguard-tools
       - gcc
       - gcc-c++
       - docker-ce
@@ -45,6 +43,8 @@ modules:
       - wine
       - wireshark
       - android-tools
+      - libxcrypt
+      - libxcrypt-compat
     remove:
       - firefox
       - firefox-langpacks
