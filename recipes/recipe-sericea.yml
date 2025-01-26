@@ -32,7 +32,9 @@ modules:
       - tlp
       - powertop
       - virt-manager
-      - VirtualBox-7.0
+      - VirtualBox-7.1
+      - virtualbox-guest-additions
+      - kernel-devel
       - gcc
       - gcc-c++
       - docker-ce
