@@ -41,6 +41,7 @@ modules:
       - wine
       - wireshark
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+      - VirtualBox
       - android-tools
     remove:
       - firefox
