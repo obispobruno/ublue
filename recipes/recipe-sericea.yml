@@ -41,7 +41,6 @@ modules:
       - containerd.io
       - wine
       - wireshark
-      - VirtualBox
       - android-tools
     remove:
       - firefox
