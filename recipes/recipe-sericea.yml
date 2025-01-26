@@ -18,6 +18,7 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
+      - rpmfusion-free.repo
     install:
       - kitty
       - kitty-terminfo
@@ -40,7 +41,6 @@ modules:
       - containerd.io
       - wine
       - wireshark
-      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
       - VirtualBox
       - android-tools
     remove:
