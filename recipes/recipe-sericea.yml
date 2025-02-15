@@ -85,7 +85,6 @@ modules:
         - org.qbittorrent.qBittorrent
         - com.obsproject.Studio
         - net.lutris.Lutris
-        - org.ryujinx.Ryujinx
         - net.pcsx2.PCSX2
         - org.prismlauncher.PrismLauncher
         - io.dbeaver.DBeaverCommunity
