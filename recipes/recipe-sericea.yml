@@ -38,8 +38,6 @@ modules:
       - docker-buildx-plugin
       - docker-compose-plugin
       - containerd.io
-      - wine
-      - wireshark
       - android-tools
     remove:
       - firefox
@@ -61,6 +59,7 @@ modules:
       repo-title: "Flathub (system-wide)"
       install:
         - org.mozilla.firefox
+        - app.zen_browser.zen
         - com.brave.Browser
         - com.github.tchx84.Flatseal
         - dev.vencord.Vesktop
