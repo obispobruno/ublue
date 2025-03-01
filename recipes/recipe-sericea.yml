@@ -58,7 +58,6 @@ modules:
       repo-name: flathub
       repo-title: "Flathub (system-wide)"
       install:
-        - org.mozilla.firefox
         - app.zen_browser.zen
         - com.brave.Browser
         - com.github.tchx84.Flatseal
