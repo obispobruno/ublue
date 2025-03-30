@@ -24,6 +24,7 @@ modules:
       - alacritty
       - ghostty
       - zsh
+      - xrandr
       - corectrl
       - zathura
       - zathura-pdf-poppler
