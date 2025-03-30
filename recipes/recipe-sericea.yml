@@ -1,8 +1,8 @@
 name: ublue-sway-custom
-description: Custom image based on ublue-os/sway-atomic-main
+description: Custom image based on ublue-os/sericea-main
 
-base-image: ghcr.io/ublue-os/sway-atomic-main
-image-version: 42
+base-image: ghcr.io/ublue-os/sericea-main
+image-version: 41
 
 modules:
   - type: files
