@@ -1,7 +1,7 @@
 name: ublue-sway-custom
-description: Custom image based on ublue-os/sericea-main
+description: Custom image based on ublue-os/sway-atomic-main
 
-base-image: ghcr.io/ublue-os/sericea-main
+base-image: ghcr.io/ublue-os/sway-atomic-main
 image-version: 41
 
 modules:
@@ -24,7 +24,6 @@ modules:
       - alacritty
       - ghostty
       - zsh
-      - xrandr
       - corectrl
       - zathura
       - zathura-pdf-poppler
