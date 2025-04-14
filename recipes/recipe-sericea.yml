@@ -33,6 +33,15 @@ modules:
       - virt-manager
       - gcc
       - gcc-c++
+      - make
+      - cmake
+      - protobuf-devel
+      - protobuf-compiler
+      - protobuf
+      - protobuf-c
+      - protobuf-c-devel
+      - pybind11-devel
+      - python3-pybind11
       - docker-ce
       - docker-ce-cli
       - docker-buildx-plugin
