@@ -36,12 +36,6 @@ modules:
       - make
       - cmake
       - protobuf-devel
-      - protobuf-compiler
-      - protobuf
-      - protobuf-c
-      - protobuf-c-devel
-      - pybind11-devel
-      - python3-pybind11
       - docker-ce
       - docker-ce-cli
       - docker-buildx-plugin
@@ -51,7 +45,6 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-      - foot
   - type: systemd
     system:
       enabled:
