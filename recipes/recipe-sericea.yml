@@ -73,6 +73,7 @@ modules:
         - com.tutanota.Tutanota
         - io.mpv.Mpv
         - com.github.iwalton3.jellyfin-media-player
+        - io.github.dweymouth.supersonic
         - com.unicornsonlsd.finamp
         - com.bitwarden.desktop
         - org.libreoffice.LibreOffice
