@@ -13,39 +13,42 @@ modules:
       - destination: /usr/share/X11/xkb
       - source: wallpapers
       - destination: /usr/share/backgrounds/ublue
-  - type: rpm-ostree
+  - type: dnf
     repos:
-      - https://download.docker.com/linux/fedora/docker-ce.repo
-      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
+      files:
+        - https://download.docker.com/linux/fedora/docker-ce.repo
+        - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
+        - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
     install:
-      - kitty
-      - kitty-terminfo
-      - alacritty
-      - ghostty
-      - zsh
-      - corectrl
-      - zathura
-      - zathura-pdf-poppler
-      - SwayNotificationCenter
-      - tlp
-      - powertop
-      - virt-manager
-      - gcc
-      - gcc-c++
-      - make
-      - cmake
-      - protobuf-devel
-      - docker-ce
-      - docker-ce-cli
-      - docker-buildx-plugin
-      - docker-compose-plugin
-      - containerd.io
-      - android-tools
-      - waydroid
+      packages:
+        - kitty
+        - kitty-terminfo
+        - alacritty
+        - ghostty
+        - zsh
+        - corectrl
+        - zathura
+        - zathura-pdf-poppler
+        - SwayNotificationCenter
+        - tlp
+        - powertop
+        - virt-manager
+        - gcc
+        - gcc-c++
+        - make
+        - cmake
+        - protobuf-devel
+        - docker-ce
+        - docker-ce-cli
+        - docker-buildx-plugin
+        - docker-compose-plugin
+        - containerd.io
+        - android-tools
+        - waydroid
     remove:
-      - firefox
-      - firefox-langpacks
+      packages:
+        - firefox
+        - firefox-langpacks
   - type: systemd
     system:
       enabled:
