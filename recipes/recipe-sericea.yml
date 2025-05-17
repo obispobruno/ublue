@@ -69,6 +69,9 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+  - type: script
+    snippets:
+      - "cp /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/bin/"
   - type: systemd
     system:
       enabled:
