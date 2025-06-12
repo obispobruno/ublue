@@ -91,6 +91,7 @@ modules:
         - com.brave.Browser
         - com.github.tchx84.Flatseal
         - dev.vencord.Vesktop
+        - com.spotify.Client
         - org.localsend.localsend_app
         - org.keepassxc.KeePassXC
         - com.nextcloud.desktopclient.nextcloud
