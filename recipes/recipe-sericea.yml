@@ -13,6 +13,8 @@ modules:
       - destination: /usr/share/X11/xkb
       - source: wallpapers
       - destination: /usr/share/backgrounds/ublue
+      - source: usr
+      - destination: /usr
   - type: dnf
     repos:
       files:
