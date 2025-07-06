@@ -8,13 +8,13 @@ modules:
   - type: files
     files:
       - source: etc
-      - destination: /etc
+        destination: /etc
       - source: xkb
-      - destination: /usr/share/X11/xkb
+        destination: /usr/share/X11/xkb
       - source: wallpapers
-      - destination: /usr/share/backgrounds/ublue
+        destination: /usr/share/backgrounds/ublue
       - source: usr
-      - destination: /usr
+        destination: /usr
   - type: dnf
     repos:
       files:
@@ -66,10 +66,14 @@ modules:
         - mangohud
         - gamemode
         - waydroid
+        - https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm
     remove:
       packages:
         - firefox
         - firefox-langpacks
+  - type: script
+    snippets:
+      - "cp /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/bin/"
   - type: systemd
     system:
       enabled:
@@ -89,6 +93,7 @@ modules:
         - com.brave.Browser
         - com.github.tchx84.Flatseal
         - dev.vencord.Vesktop
+        - com.spotify.Client
         - org.localsend.localsend_app
         - org.keepassxc.KeePassXC
         - com.nextcloud.desktopclient.nextcloud
