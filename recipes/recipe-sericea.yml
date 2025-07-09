@@ -7,14 +7,6 @@ image-version: 42
 modules:
   - type: files
     files:
-      - source: etc
-        destination: /etc
-      - source: xkb
-        destination: /usr/share/X11/xkb
-      - source: wallpapers
-        destination: /usr/share/backgrounds/ublue
-      - source: usr
-        destination: /usr
       - source: system
         destination: /
   - type: dnf
