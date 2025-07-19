@@ -86,7 +86,7 @@ modules:
         - app.zen_browser.zen
         - com.brave.Browser
         - com.github.tchx84.Flatseal
-        - dev.vencord.Vesktop
+        - com.discordapp.Discord
         - com.spotify.Client
         - org.localsend.localsend_app
         - org.keepassxc.KeePassXC
@@ -100,6 +100,7 @@ modules:
         - com.unicornsonlsd.finamp
         - com.bitwarden.desktop
         - org.libreoffice.LibreOffice
+        - org.onlyoffice.desktopeditors
         - com.rtosta.zapzap
         - org.filezillaproject.Filezilla
         - com.github.IsmaelMartinez.teams_for_linux
@@ -114,11 +115,14 @@ modules:
         - net.pcsx2.PCSX2
         - org.prismlauncher.PrismLauncher
         - io.dbeaver.DBeaverCommunity
+        - org.torproject.torbrowser-launcher
+        - com.spotify.Client
         - org.kde.kasts
         - io.gitlab.news_flash.NewsFlash
         - org.gnome.World.Iotas
         - io.github.thetumultuousunicornofdarkness.cpu-x
         - org.openrgb.OpenRGB
+        - org.gnome.gitlab.YaLTeR.VideoTrimmer
   - type: brew
     nofile-limits: true
   - type: chezmoi
