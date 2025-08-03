@@ -5,10 +5,6 @@ base-image: ghcr.io/ublue-os/sway-atomic-main
 image-version: 42
 
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: /
   - type: dnf
     repos:
       files:
@@ -68,6 +64,11 @@ modules:
   - type: script
     snippets:
       - "cp /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/bin/"
+      - "rm -rf /usr/lib/waydroid/data/scripts/waydroid-net.sh"
+  - type: files
+    files:
+      - source: system
+        destination: /
   - type: systemd
     system:
       enabled:
