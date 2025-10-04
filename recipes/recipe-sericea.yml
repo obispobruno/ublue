@@ -96,6 +96,8 @@ modules:
           - io.freetubeapp.FreeTube
           - com.tutanota.Tutanota
           - io.mpv.Mpv
+          - org.kde.haruna
+          - com.usebruno.Bruno
           - com.github.iwalton3.jellyfin-media-player
           - io.github.dweymouth.supersonic
           - com.unicornsonlsd.finamp
