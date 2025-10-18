@@ -26,6 +26,10 @@ modules:
         - tlp
         - powertop
         - virt-manager
+        - vagrant
+        - qemu-kvm
+        - libvirt
+        - vagrant-libvirt
         - gcc
         - gcc-c++
         - patch
