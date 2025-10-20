@@ -78,6 +78,7 @@ modules:
     system:
       enabled:
         - docker.service
+        - libvirt-workaround.service
   - type: fonts
     fonts:
       nerd-fonts:
