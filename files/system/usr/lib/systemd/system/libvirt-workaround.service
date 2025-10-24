@@ -7,6 +7,7 @@ After=local-fs.target
 Type=oneshot
 ExecStart=-/usr/sbin/restorecon -R /var/log/libvirt/
 ExecStart=-/usr/sbin/restorecon -R /var/lib/libvirt/
+ExecStart=-/usr/bin/systemctl restart libvirtd.service
 RemainAfterExit=yes
 
 [Install]
