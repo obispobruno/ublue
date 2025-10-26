@@ -1,7 +1,7 @@
 name: ublue-sway-custom
-description: Custom image based on ublue-os/sericea-main
+description: Custom image based on quay.io/fedora-ostree-desktops/sway-atomic
 
-base-image: ghcr.io/ublue-os/sway-atomic-main
+base-image: quay.io/fedora-ostree-desktops/sway-atomic
 image-version: 42
 
 modules:
