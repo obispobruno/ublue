@@ -1,21 +1,10 @@
 ---
 modules:
   - type: signing
-  - type: justfiles
   - type: files
     files:
       - source: system
         destination: /
-  - type: systemd
-    system:
-      masked:
-        - rpm-ostreed-automatic.timer
-      enabled:
-        - bootc-fetch-apply-updates.timer
-        - docker.service
-        - libvirtd.service
-        - libvirt-workaround.service
-        - setup-groups.service
   - type: dnf
     repos:
       cleanup: true
@@ -125,6 +114,17 @@ modules:
           - mesa-va-drivers
           - mesa-vulkan-drivers
 
+  - type: systemd
+    system:
+      masked:
+        - rpm-ostreed-automatic.timer
+      enabled:
+        - bootc-fetch-apply-updates.timer
+        - docker.service
+        - libvirtd.service
+        - libvirt-workaround.service
+        - setup-groups.service
+
   - type: script
     env:
       CSFG: /usr/lib/systemd/system-generators/coreos-sulogin-force-generator
@@ -136,12 +136,6 @@ modules:
       # see detail: https://github.com/ublue-os/main/issues/653
       - curl -sSLo ${CSFG} https://raw.githubusercontent.com/coreos/fedora-coreos-config/refs/heads/stable/overlay.d/05core/usr/lib/systemd/system-generators/coreos-sulogin-force-generator
       - chmod +x ${CSFG}
-
-      # Adjust ublue just recipes
-      - sed -i 's|rpm-ostreed-automatic\.timer|bootc-fetch-apply-updates.timer|g' /usr/share/ublue-os/just/10-update.just
-      - sed -i 's|update_command "rpm-ostree update"|update_command "sudo bootc upgrade"|g' /usr/share/ublue-os/just/10-update.just
-      - sed -i 's|/etc/pki/akmods/certs/akmods-ublue\.der|/etc/pki/akmods/certs/akmods-wunker-bunker.der|g' /usr/share/ublue-os/just/00-default.just
-      - sed -i 's|"universalblue"|"wunker"|g' /usr/share/ublue-os/just/00-default.just
 
       # Add SUDO_ASKPASS as a global environment
       - echo "SUDO_ASKPASS=/usr/libexec/openssh/ssh-askpass" >> /etc/environment
