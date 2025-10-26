@@ -78,7 +78,9 @@ modules:
     system:
       enabled:
         - docker.service
+        - libvirtd.service
         - libvirt-workaround.service
+        - setup-groups.service
   - type: fonts
     fonts:
       nerd-fonts:
