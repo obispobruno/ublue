@@ -120,9 +120,6 @@ modules:
         - rpm-ostreed-automatic.timer
       enabled:
         - bootc-fetch-apply-updates.timer
-        - docker.service
-        - libvirtd.service
-        - libvirt-workaround.service
         - setup-groups.service
 
   - type: script
