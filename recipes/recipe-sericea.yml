@@ -1,3 +1,4 @@
+---
 name: ublue-sway-custom
 description: Custom image based on quay.io/fedora-ostree-desktops/sway-atomic
 
@@ -5,6 +6,7 @@ base-image: quay.io/fedora-ostree-desktops/sway-atomic
 image-version: 42
 
 modules:
+  - from-file: base/common.yml
   - type: dnf
     repos:
       files:
@@ -70,21 +72,6 @@ modules:
     snippets:
       - "cp /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/bin/"
       - "rm -rf /usr/lib/waydroid/data/scripts/waydroid-net.sh"
-  - type: files
-    files:
-      - source: system
-        destination: /
-  - type: systemd
-    system:
-      enabled:
-        - docker.service
-        - libvirtd.service
-        - libvirt-workaround.service
-        - setup-groups.service
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - JetBrainsMono
   - type: default-flatpaks
     configurations:
       - notify: true
@@ -134,9 +121,3 @@ modules:
           - io.github.thetumultuousunicornofdarkness.cpu-x
           - org.openrgb.OpenRGB
           - org.gnome.gitlab.YaLTeR.VideoTrimmer
-  - type: brew
-    nofile-limits: true
-  - type: chezmoi
-    repository: "https://github.com/obispobruno/dotfiles"
-  - type: justfiles
-  - type: signing
