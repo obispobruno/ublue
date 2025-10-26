@@ -1,0 +1,16 @@
+---
+modules:
+  - type: dnf
+    install:
+      packages:
+        - libvirt
+        - libvirt-nss
+        - virt-manager
+        - qemu-kvm
+        - vagrant
+        - vagrant-libvirt
+  - type: systemd
+    system:
+      enabled:
+        - libvirtd.service
+        - libvirt-workaround.service

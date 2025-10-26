@@ -7,10 +7,11 @@ image-version: 42
 
 modules:
   - from-file: base/common.yml
+  - from-file: common/docker-engine.yml
+  - from-file: common/libvirt.yml
   - type: dnf
     repos:
       files:
-        - https://download.docker.com/linux/fedora/docker-ce.repo
         - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
         - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
         - https://negativo17.org/repos/fedora-steam.repo
@@ -27,11 +28,6 @@ modules:
         - SwayNotificationCenter
         - tlp
         - powertop
-        - virt-manager
-        - vagrant
-        - qemu-kvm
-        - libvirt
-        - vagrant-libvirt
         - gcc
         - gcc-c++
         - patch
@@ -51,11 +47,6 @@ modules:
         - make
         - cmake
         - protobuf-devel
-        - docker-ce
-        - docker-ce-cli
-        - docker-buildx-plugin
-        - docker-compose-plugin
-        - containerd.io
         - android-tools
         - steam
         - gamescope
@@ -124,7 +115,4 @@ modules:
   - type: systemd
     system:
       enabled:
-        - docker.service
-        - libvirtd.service
-        - libvirt-workaround.service
         - setup-groups.service
