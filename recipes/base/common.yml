@@ -48,6 +48,7 @@ modules:
         - libcamera-gstreamer
         - libcamera-ipa
         - libfdk-aac
+        - libfdk-aac.i686
         - libheif
         - libimobiledevice-utils
         - libratbag-ratbagd
@@ -99,20 +100,20 @@ modules:
           - new: ocl-icd
             old: OpenCL-ICD-Loader
 
-      # use override to replace mesa and others with less crippled versions
-      - from-repo: fedora-multimedia
-        install-weak-deps: false
-        packages:
-          - libva
-          - intel-vpl-gpu-rt
-          - intel-mediasdk
-          - mesa-dri-drivers
-          - mesa-filesystem
-          - mesa-libEGL
-          - mesa-libGL
-          - mesa-libgbm
-          - mesa-va-drivers
-          - mesa-vulkan-drivers
+      # # use override to replace mesa and others with less crippled versions
+      # - from-repo: fedora-multimedia
+      #   install-weak-deps: false
+      #   packages:
+      #     - libva
+      #     - intel-vpl-gpu-rt
+      #     - intel-mediasdk
+      #     - mesa-dri-drivers
+      #     - mesa-filesystem
+      #     - mesa-libEGL
+      #     - mesa-libGL
+      #     - mesa-libgbm
+      #     - mesa-va-drivers
+      #     - mesa-vulkan-drivers
 
   - type: systemd
     system:
@@ -122,25 +123,17 @@ modules:
         - bootc-fetch-apply-updates.timer
         - setup-groups.service
 
-  - type: script
-    env:
-      CSFG: /usr/lib/systemd/system-generators/coreos-sulogin-force-generator
-    snippets:
-      # Lock the drivers and kernel versions
-      - dnf5 versionlock add kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra libva intel-gmmlib intel-vpl-gpu-rt intel-mediasdk libva-intel-media-driver mesa-dri-drivers mesa-filesystem mesa-libEGL mesa-libGL mesa-libgbm mesa-va-drivers mesa-vulkan-drivers
-
-      # use CoreOS' generator for emergency/rescue boot
-      # see detail: https://github.com/ublue-os/main/issues/653
-      - curl -sSLo ${CSFG} https://raw.githubusercontent.com/coreos/fedora-coreos-config/refs/heads/stable/overlay.d/05core/usr/lib/systemd/system-generators/coreos-sulogin-force-generator
-      - chmod +x ${CSFG}
-
-      # Add SUDO_ASKPASS as a global environment
-      - echo "SUDO_ASKPASS=/usr/libexec/openssh/ssh-askpass" >> /etc/environment
-  - type: brew
-    nofile-limits: true
-  - type: chezmoi
-    repository: "https://github.com/obispobruno/dotfiles"
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - JetBrainsMono
+  # - type: script
+  #   env:
+  #     CSFG: /usr/lib/systemd/system-generators/coreos-sulogin-force-generator
+  #   snippets:
+  #     # Lock the drivers and kernel versions
+  #     - dnf5 versionlock add kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra libva intel-gmmlib intel-vpl-gpu-rt intel-mediasdk libva-intel-media-driver mesa-dri-drivers mesa-filesystem mesa-libEGL mesa-libGL mesa-libgbm mesa-va-drivers mesa-vulkan-drivers
+  #
+  #     # use CoreOS' generator for emergency/rescue boot
+  #     # see detail: https://github.com/ublue-os/main/issues/653
+  #     - curl -sSLo ${CSFG} https://raw.githubusercontent.com/coreos/fedora-coreos-config/refs/heads/stable/overlay.d/05core/usr/lib/systemd/system-generators/coreos-sulogin-force-generator
+  #     - chmod +x ${CSFG}
+  #
+  #     # Add SUDO_ASKPASS as a global environment
+  #     - echo "SUDO_ASKPASS=/usr/libexec/openssh/ssh-askpass" >> /etc/environment
