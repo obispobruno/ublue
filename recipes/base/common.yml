@@ -117,11 +117,12 @@ modules:
 
   - type: systemd
     system:
-      masked:
-        - rpm-ostreed-automatic.timer
       enabled:
-        - bootc-fetch-apply-updates.timer
         - setup-groups.service
+      # masked:
+      #   - rpm-ostreed-automatic.timer
+      # enabled:
+      #   - bootc-fetch-apply-updates.timer
 
   # - type: script
   #   env:
