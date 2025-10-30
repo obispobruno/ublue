@@ -119,6 +119,7 @@ modules:
     system:
       enabled:
         - setup-groups.service
+        - rpm-ostreed-automatic.timer
       # masked:
       #   - rpm-ostreed-automatic.timer
       # enabled:
