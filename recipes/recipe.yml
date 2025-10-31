@@ -12,9 +12,10 @@ modules:
   - from-file: common/default-flatpaks.yml
   - type: dnf
     repos:
+      copr:
+        - erikreider/SwayNotificationCenter
+        - pgdev/ghostty
       files:
-        - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
-        - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
         - https://negativo17.org/repos/fedora-steam.repo
     install:
       packages:
