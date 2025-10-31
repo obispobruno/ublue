@@ -73,3 +73,4 @@ modules:
     fonts:
       nerd-fonts:
         - JetBrainsMono
+  - type: initramfs
