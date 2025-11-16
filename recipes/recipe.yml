@@ -62,6 +62,9 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+  - type: kargs
+    kargs:
+      - amdgpu.ppfeaturemask=0xffffffff
   - type: script
     snippets:
       - "cp /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/bin/"
