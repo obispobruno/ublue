@@ -120,6 +120,7 @@ modules:
       enabled:
         - setup-groups.service
         - rpm-ostreed-automatic.timer
+        - wol.service
       # masked:
       #   - rpm-ostreed-automatic.timer
       # enabled:
