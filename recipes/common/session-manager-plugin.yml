@@ -1,0 +1,9 @@
+---
+modules:
+  - type: dnf
+    install:
+      packages:
+        - https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm
+  - type: script
+    snippets:
+      - "cp /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/bin/"

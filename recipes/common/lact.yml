@@ -1,0 +1,17 @@
+---
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - ilyaz/LACT
+    install:
+      packages:
+        - lact
+  - type: kargs
+    kargs:
+      - amdgpu.ppfeaturemask=0xffffffff
+  - type: systemd
+    system:
+      enabled:
+        - lactd.service

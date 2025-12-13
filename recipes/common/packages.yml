@@ -1,0 +1,37 @@
+modules:
+  - from-file: common/docker-engine.yml
+  - from-file: common/libvirt.yml
+  - from-file: common/lact.yml
+  - from-file: common/session-manager-plugin.yml
+  - from-file: common/steam.yml
+  - from-file: common/waydroid.yml
+  - type: dnf
+    install:
+      packages:
+        - kitty
+        - kitty-terminfo
+        - alacritty
+        - zsh
+        - corectrl
+        - tlp
+        - powertop
+        - gcc
+        - gcc-c++
+        - patch
+        - zlib-devel
+        - bzip2
+        - bzip2-devel
+        - readline-devel
+        - sqlite
+        - sqlite-devel
+        - openssl-devel
+        - tk-devel
+        - libffi-devel
+        - xz-devel
+        - libuuid-devel
+        - gdbm-libs
+        - libnsl2
+        - make
+        - cmake
+        - protobuf-devel
+        - android-tools

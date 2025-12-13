@@ -115,6 +115,17 @@ modules:
       #     - mesa-va-drivers
       #     - mesa-vulkan-drivers
 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
+
+  - type: brew
+    nofile-limits: true
+
+  - type: chezmoi
+    repository: "https://github.com/obispobruno/dotfiles"
+
   - type: systemd
     system:
       enabled:

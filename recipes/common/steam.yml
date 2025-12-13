@@ -1,0 +1,13 @@
+---
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      files:
+        - https://negativo17.org/repos/fedora-steam.repo
+    install:
+      packages:
+        - steam
+        - gamescope
+        - mangohud
+        - gamemode

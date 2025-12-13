@@ -1,0 +1,10 @@
+---
+modules:
+  - type: dnf
+    install:
+      packages:
+        - waydroid
+        - waydroid-selinux
+  - type: script
+    snippets:
+      - "rm -rf /usr/lib/waydroid/data/scripts/waydroid-net.sh"

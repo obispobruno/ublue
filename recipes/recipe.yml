@@ -7,74 +7,21 @@ image-version: 42
 
 modules:
   - from-file: base/common.yml
-  - from-file: common/docker-engine.yml
-  - from-file: common/libvirt.yml
+  - from-file: common/packages.yml
   - from-file: common/default-flatpaks.yml
   - type: dnf
     repos:
+      cleanup: true
       copr:
         - erikreider/SwayNotificationCenter
-        - pgdev/ghostty
-      files:
-        - https://negativo17.org/repos/fedora-steam.repo
     install:
       packages:
-        - kitty
-        - kitty-terminfo
-        - alacritty
-        - ghostty
-        - zsh
-        - corectrl
+        - gammastep
         - zathura
         - zathura-pdf-poppler
         - SwayNotificationCenter
-        - tlp
-        - powertop
-        - gcc
-        - gcc-c++
-        - patch
-        - zlib-devel
-        - bzip2
-        - bzip2-devel
-        - readline-devel
-        - sqlite
-        - sqlite-devel
-        - openssl-devel
-        - tk-devel
-        - libffi-devel
-        - xz-devel
-        - libuuid-devel
-        - gdbm-libs
-        - libnsl2
-        - make
-        - cmake
-        - protobuf-devel
-        - android-tools
-        - steam
-        - gamescope
-        - mangohud
-        - gamemode
-        - waydroid
-        - waydroid-selinux
-        - gammastep
-        - https://s3.amazonaws.com/session-manager-downloads/plugin/latest/linux_64bit/session-manager-plugin.rpm
     remove:
       packages:
         - firefox
         - firefox-langpacks
-  - type: kargs
-    kargs:
-      - amdgpu.ppfeaturemask=0xffffffff
-  - type: script
-    snippets:
-      - "cp /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/bin/"
-      - "rm -rf /usr/lib/waydroid/data/scripts/waydroid-net.sh"
-  - type: brew
-    nofile-limits: true
-  - type: chezmoi
-    repository: "https://github.com/obispobruno/dotfiles"
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - JetBrainsMono
   - type: initramfs
