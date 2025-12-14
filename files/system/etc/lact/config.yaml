@@ -1,0 +1,16 @@
+version: 5
+daemon:
+  log_level: info
+  admin_group: wheel
+  disable_clocks_cleanup: false
+apply_settings_timer: 5
+gpus:
+  1002:73DF-1002:0E36-0000:2d:00.0:
+    fan_control_enabled: false
+    power_cap: 186.0
+    performance_level: manual
+    max_core_clock: 2600
+    voltage_offset: -90
+    power_profile_mode_index: 1
+current_profile: null
+auto_switch_profiles: false
