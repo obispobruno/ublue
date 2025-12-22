@@ -9,6 +9,9 @@ modules:
   - from-file: base/common.yml
   - from-file: common/packages.yml
   - from-file: common/default-flatpaks.yml
+  - type: script
+    scripts:
+      - nct6687d.sh
   - type: dnf
     repos:
       cleanup: true
