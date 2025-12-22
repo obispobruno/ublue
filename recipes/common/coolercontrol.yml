@@ -1,0 +1,14 @@
+
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - codifryed/CoolerControl
+    install:
+      packages:
+        - coolercontrol
+  - type: systemd
+    system:
+      enabled:
+        - coolercontrold.service

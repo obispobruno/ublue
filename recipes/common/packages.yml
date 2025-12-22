@@ -2,6 +2,7 @@ modules:
   - from-file: common/docker-engine.yml
   - from-file: common/libvirt.yml
   - from-file: common/lact.yml
+  - from-file: common/coolercontrol.yml
   - from-file: common/session-manager-plugin.yml
   - from-file: common/steam.yml
   - from-file: common/waydroid.yml
