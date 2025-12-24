@@ -36,3 +36,4 @@ modules:
         - cmake
         - protobuf-devel
         - android-tools
+        - waypipe
