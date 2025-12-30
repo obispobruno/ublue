@@ -1,3 +1,4 @@
+---
 modules:
   - from-file: common/docker-engine.yml
   - from-file: common/libvirt.yml
@@ -5,6 +6,7 @@ modules:
   - from-file: common/coolercontrol.yml
   - from-file: common/session-manager-plugin.yml
   - from-file: common/steam.yml
+  - from-file: common/sunshine.yml
   - from-file: common/waydroid.yml
   - type: dnf
     install:

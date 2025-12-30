@@ -1,0 +1,10 @@
+---
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - lizardbyte/stable
+    install:
+      packages:
+        - Sunshine

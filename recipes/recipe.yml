@@ -3,7 +3,7 @@ name: ublue-sway-custom
 description: Custom image based on quay.io/fedora-ostree-desktops/sway-atomic
 
 base-image: quay.io/fedora-ostree-desktops/sway-atomic
-image-version: 43
+image-version: 42
 
 modules:
   - from-file: base/common.yml
