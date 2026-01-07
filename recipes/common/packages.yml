@@ -39,3 +39,4 @@ modules:
         - protobuf-devel
         - android-tools
         - waypipe
+        - phoronix-test-suite
