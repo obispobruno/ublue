@@ -4,7 +4,7 @@ modules:
     repos:
       cleanup: true
       copr:
-        - lizardbyte/stable
+        - lizardbyte/beta
     install:
       packages:
         - Sunshine
