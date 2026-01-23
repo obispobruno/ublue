@@ -168,6 +168,7 @@ modules:
       enabled:
         - setup-groups.service
         - rpm-ostreed-automatic.timer
+        - flatpak-update.service
         - wol.service
       # masked:
       #   - rpm-ostreed-automatic.timer
