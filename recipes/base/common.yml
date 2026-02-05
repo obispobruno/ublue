@@ -159,6 +159,7 @@ modules:
 
   - type: brew
     nofile-limits: true
+    direct-pull: true
 
   - type: chezmoi
     repository: "https://github.com/obispobruno/dotfiles"
