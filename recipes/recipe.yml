@@ -12,6 +12,7 @@ modules:
   - type: script
     scripts:
       - nct6687d.sh
+      - new-lg4ff.sh
   - type: dnf
     repos:
       cleanup: true
