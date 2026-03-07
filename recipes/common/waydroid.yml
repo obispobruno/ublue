@@ -8,3 +8,7 @@ modules:
   - type: script
     snippets:
       - "rm -rf /usr/lib/waydroid/data/scripts/waydroid-net.sh"
+  - type: files
+    files:
+      - source: system/usr/lib/waydroid/data/scripts/waydroid-net.sh
+        destination: /usr/lib/waydroid/data/scripts/waydroid-net.sh
