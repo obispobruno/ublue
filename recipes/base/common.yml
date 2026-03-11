@@ -168,10 +168,8 @@ modules:
     system:
       enabled:
         - setup-groups.service
-        - rpm-ostreed-automatic.timer
+        - bootc-fetch-apply-updates.timer
         - flatpak-update.service
         - wol.service
-      # masked:
-      #   - rpm-ostreed-automatic.timer
-      # enabled:
-      #   - bootc-fetch-apply-updates.timer
+      masked:
+        - rpm-ostreed-automatic.timer
