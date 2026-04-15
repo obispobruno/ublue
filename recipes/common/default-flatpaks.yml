@@ -10,7 +10,7 @@ modules:
           - app.zen_browser.zen
           - com.github.tchx84.Flatseal
           - com.discordapp.Discord
-          - com.spotify.Client
+          - org.jeffvli.feishin
           - org.localsend.localsend_app
           - com.nextcloud.desktopclient.nextcloud
           - io.missioncenter.MissionCenter
