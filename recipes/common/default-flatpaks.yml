@@ -23,6 +23,8 @@ modules:
           - org.libreoffice.LibreOffice
           - org.onlyoffice.desktopeditors
           - com.rtosta.zapzap
+          - org.telegram.desktop
+          - org.mozilla.Thunderbird
           - org.filezillaproject.Filezilla
           - com.github.IsmaelMartinez.teams_for_linux
           - com.github.xournalpp.xournalpp
