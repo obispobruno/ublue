@@ -19,7 +19,7 @@ modules:
           - io.mpv.Mpv
           - org.kde.haruna
           - com.usebruno.Bruno
-          - com.github.iwalton3.jellyfin-media-player
+          - org.jellyfin.JellyfinDesktop
           - org.libreoffice.LibreOffice
           - org.onlyoffice.desktopeditors
           - com.rtosta.zapzap
