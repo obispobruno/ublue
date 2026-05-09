@@ -40,3 +40,4 @@ modules:
         - android-tools
         - waypipe
         - phoronix-test-suite
+        - chromium

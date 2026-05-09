@@ -24,8 +24,4 @@ modules:
         - zathura
         - zathura-pdf-poppler
         - SwayNotificationCenter
-    remove:
-      packages:
-        - firefox
-        - firefox-langpacks
   - type: initramfs
