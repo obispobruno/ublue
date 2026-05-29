@@ -20,7 +20,6 @@ modules:
         - erikreider/SwayNotificationCenter
     install:
       packages:
-        - gammastep
         - zathura
         - zathura-pdf-poppler
         - SwayNotificationCenter
