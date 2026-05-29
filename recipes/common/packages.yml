@@ -15,9 +15,6 @@ modules:
         - kitty-terminfo
         - alacritty
         - zsh
-        - corectrl
-        - tlp
-        - powertop
         - gcc
         - gcc-c++
         - patch
