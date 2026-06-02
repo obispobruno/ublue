@@ -36,5 +36,6 @@ modules:
         - protobuf-devel
         - android-tools
         - waypipe
+        - wine
         - phoronix-test-suite
         - chromium
