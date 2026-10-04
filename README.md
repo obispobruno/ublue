@@ -30,6 +30,30 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
+## Custom commands
+
+The `justfiles` module installs recipes from `files/justfiles/custom.just`.
+This Fedora-based image uses `blujust` rather than Universal Blue's `ujust`.
+Run `blujust --list` to see the commands after deploying the rebuilt image.
+
+To make plain `just` available from your home directory, set the import in
+`~/.justfile` to `/usr/share/bluebuild/justfile` after that file exists.
+
+`blujust configure-coolercontrol` restores
+`~/.config/coolercontrol/config.toml` to the daemon configuration directory.
+It validates the snapshot, stops the daemon, backs up the current settings,
+and restarts the daemon. A failed installation rolls back the original config.
+The snapshot must already exist; refreshing it from `/etc/coolercontrol/config.toml`
+and tracking it with chezmoi is a separate, manual operation.
+Keep these snapshots machine-specific because their device IDs and fan mappings
+depend on the hardware. Do not include daemon credentials or TLS private keys.
+
+The legacy `install-opentabletdriver` recipe still depends on
+`/usr/lib/ujust/ujust.sh`; the `justfiles` module does not provide that helper.
+
+Validate local changes with the unittest suite under `tests/` and BlueBuild's
+recipe validation before building the image.
+
 ## ISO
 
 If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.

@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+if [[ $(id -u) != 0 ]]; then
+    echo 'Run this helper with sudo and pass the snapshot path.' >&2
+    exit 1
+fi
+if [[ $# != 1 || ! -f $1 ]]; then
+    echo 'Usage: restore-coolercontrol-config /path/to/config.toml (file must exist)' >&2
+    exit 1
+fi
+
+export CC_CONFIG_DIR="${CC_CONFIG_DIR:-/etc/coolercontrol}"
+live="$CC_CONFIG_DIR/config.toml"
+if [[ ! -f $live || -L $live ]]; then
+    echo "Expected an existing regular config file at $live" >&2
+    exit 1
+fi
+
+stage=$(mktemp -d "$CC_CONFIG_DIR/.restore-validation.XXXXXXXX")
+backup=''
+replacement=''
+stopped=0
+written=0
+
+cleanup() {
+    rc=$?
+    trap - EXIT
+    if (( rc != 0 && stopped )); then
+        if (( written )); then
+            echo "Restore failed; restoring original config from $backup" >&2
+            systemctl stop coolercontrold || true
+            if ! cp --preserve=mode,ownership -- "$backup" "$live"; then
+                echo "ROLLBACK FAILED. Backup: $backup. Daemon left stopped." >&2
+                exit "$rc"
+            fi
+        fi
+        systemctl start coolercontrold || echo 'Daemon restart failed; inspect coolercontrold logs.' >&2
+    fi
+    rm -f -- "$stage/config.toml"
+    rmdir -- "$stage"
+    if [[ -n $replacement ]]; then
+        rm -f -- "$replacement"
+    fi
+    exit "$rc"
+}
+trap cleanup EXIT
+
+# Validate a stable copy before stopping the daemon or touching the live config.
+cp -- "$1" "$stage/config.toml"
+CC_CONFIG_DIR="$stage" coolercontrold check
+systemctl is-active --quiet coolercontrold
+stopped=1
+systemctl stop coolercontrold
+coolercontrold backup
+backup=$(mktemp "$CC_CONFIG_DIR/config.before-restore.XXXXXXXX.toml")
+cp --preserve=mode,ownership -- "$live" "$backup"
+
+# Preserve the live file's permissions and replace it atomically.
+replacement=$(mktemp "$CC_CONFIG_DIR/.config-restore.XXXXXXXX")
+cp --preserve=mode,ownership -- "$live" "$replacement"
+cp -- "$stage/config.toml" "$replacement"
+written=1
+mv -f -- "$replacement" "$live"
+replacement=''
+coolercontrold check
+systemctl start coolercontrold
+sleep 2
+systemctl is-active --quiet coolercontrold
+stopped=0
+echo "CoolerControl configuration restored. Original config: $backup"

@@ -16,16 +16,22 @@ install-jetbrains-font:
 
 configure-corectrl:
     #!/usr/bin/env bash
-    
+
     mkdir -p ~/.config/autostart
-    
+
     if [[ -f /usr/share/applications/org.corectrl.corectrl.desktop ]]; then
     	cp /usr/share/applications/org.corectrl.corectrl.desktop ~/.config/autostart/org.corectrl.CoreCtrl.desktop
     elif [[ -f /usr/share/applications/org.corectrl.CoreCtrl.desktop ]]; then
     	cp /usr/share/applications/org.corectrl.CoreCtrl.desktop ~/.config/autostart/org.corectrl.CoreCtrl.desktop
     fi
-    
+
     rpm-ostree kargs --append-if-missing=amdgpu.ppfeaturemask=0xffffffff
+
+# Restore the chezmoi-managed snapshot, with validation, backup, and rollback.
+configure-coolercontrol:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    sudo bash /usr/libexec/restore-coolercontrol-config "$HOME/.config/coolercontrol/config.toml"
 
 configure-group-permissions:
     #!/usr/bin/env bash

@@ -7,6 +7,12 @@ modules:
       - source: system
         destination: /
 
+  - type: justfiles
+    install: true
+    validate: true
+    include:
+      - custom.just
+
   # Install stuff from negativo
   - type: dnf
     repos:
